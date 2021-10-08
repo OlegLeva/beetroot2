@@ -1,4 +1,5 @@
 import json
+
 #
 # data_json = [
 #     {
@@ -18,17 +19,16 @@ f = open("data.json")
 try:
     phb = json.load(f)
 except json.decoder.JSONDecodeError:
-     phb = []
+    phb = []
 f.close()
 
-data_json = [
-    {
-     'name': '',
-     'last_name': '',
-     'phone': '',
-     'city': ''
-     }
-]
+patern_dict = {
+    'name': '',
+    'last_name': '',
+    'phone': '',
+    'city': ''
+}
+
 
 def add_dict(lst, dct):
     name = input('Enter name: ')
@@ -42,20 +42,36 @@ def add_dict(lst, dct):
     new_dict['city'] = city
     return lst.append(new_dict)
 
+
 def search_name(name, lst):
     for i in lst:
-        if i[name] == name:
+        if i['name'] == name:
             print("Found person")
             print(i)
+
 
 def search_last_name(last_name, lst):
     for i in lst:
-        if i[last_name] == last_name:
+        if i['last_name'] == last_name:
             print("Found person")
             print(i)
 
+
 def search_phone(phone, lst):
     for i in lst:
-        if i[phone] == phone:
+        if i['phone'] == phone:
             print("Found person")
             print(i)
+
+
+query = input('Choose an action: ')
+
+if query == 'add':
+    add_dict(phb, patern_dict)
+
+if query == 'search name':
+    n = input("Enter name: ")
+    search_name(n, phb)
+
+with open("data.json", 'w') as file:
+    json.dump(phb, file, indent=4)
