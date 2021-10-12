@@ -32,3 +32,24 @@ berger = Teacher('Бергер', 72, 'мужчина', 'политология',
 print(berger.data_person(), berger.data_teacher())
 leva = Student('Oleg', 42, 'мужчина', 'stacionar', 'managment')
 print(leva.data_person(), leva.faculty)
+
+
+class Mathematician:
+    pass
+
+    def square_nums(self, lst):
+        return [i * i for i in lst]
+
+
+    def remove_positives(self, lst):
+        return [i for i in lst if i < 0]
+
+
+    def filter_leaps(self, lst):
+        return [lst[i] for i in range(len(lst)) if lst[i] % 4 == 0]
+
+
+m = Mathematician()
+print(m.remove_positives([26, -11, -8, 13, -90]))
+print(m.square_nums([2, 8, 9]))
+print(m.filter_leaps([2001, 1884, 1995, 2003, 2020]))
