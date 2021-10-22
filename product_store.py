@@ -24,6 +24,7 @@ apple_store = ProductStore()
 apple_store.add(apple, 10)
 print(apple.price)
 print(apple_store.warehouse[0]['product'])
+print(Product.mro())
 
 
 
