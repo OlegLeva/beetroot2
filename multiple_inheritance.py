@@ -38,3 +38,4 @@ class NormalMan(Meat_eater, Vegitarian):
 
 norm_man = NormalMan('Max', 43, 'pork', 'eggplant')
 print(norm_man.poped())
+print(Vegitarian.poped(norm_man))
