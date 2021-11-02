@@ -1,29 +1,25 @@
 from functools import wraps
 
-class TypeDecorators:
 
-    def __call__(self, func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            value = func(*args, **kwargs)
-            return value
-        return wrapper
+class TypeDecorators:
+    def __init__(self, func):
+        self.func = func
+
+    def __call__(self, *args, **kwargs):
+        res = self.func(*args, **kwargs)
+        return res
 
     def to_int(self, value):
-        if value.isdigt():
+        if value.isdigit():
             return int(value)
         else:
             raise TypeError('wrong type')
 
 
-
-    # to_str
-    #
-    # to_bool
-    #
-    # to_float
-@TypeDecorators.to_int
+@TypeDecorators
 def print_dig_str(str_dig):
     return str_dig
 
-print(print_dig_str('55'))
+
+print(print_dig_str.to_int('22'))
+print(type(print_dig_str.to_int('22')))
