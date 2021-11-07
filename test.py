@@ -1,12 +1,14 @@
+def fib():
+    numb, next_numb = 1, 1
+    while True:
+        yield numb
+        numb, next_numb = next_numb, numb + next_numb
 
-def drink(name):
-    return f"{name} drinks pepsi in his brand new BMW!"
 
-text = "Stiv drinks pepsi in his brand new BMW!"
-my_list = ['pepsi', 'BMW']
+for i in (fib()):
+    if i % 12 == 0:
+        print("Всё приехали")
+        break
+    print(i)
 
-text = text.replace('BMW', '*')
-print(text)
-text = text.replace('pepsi', '*')
-print(text)
 
