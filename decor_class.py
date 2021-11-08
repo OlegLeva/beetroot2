@@ -15,6 +15,8 @@ class TypeDecorators:
         else:
             raise TypeError('wrong type')
 
+    
+
 
 @TypeDecorators
 def print_dig_str(str_dig):

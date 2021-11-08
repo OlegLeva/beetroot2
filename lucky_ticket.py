@@ -94,5 +94,10 @@ def lucky_ticket_(x):
 
 print(lucky_ticket_(1000000))
 
+x = 253352
+
+is_happy = lambda x: x % 1e3 % 9 == x // 1e3 % 9
+print(is_happy)
+
 
 
