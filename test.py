@@ -11,4 +11,3 @@ for i in (fib()):
         break
     print(i)
 
-

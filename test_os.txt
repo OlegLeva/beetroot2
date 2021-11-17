@@ -1,0 +1,190 @@
+0: funtions.py 
+1: fraction_func.py 
+2: logs.txt 
+3: decor_task.py 
+4: files.py 
+5: polimorfizm.py 
+6: dict_split.py 
+7: lucky_ticket.py 
+8: decorator_with_param.py 
+9: library_class.py 
+10: primer.py 
+11: multiple_inheritance.py 
+12: os__.py 
+13: logfile.log 
+14: bools.py 
+15: format.py 
+16: my_exception.py 
+17: json_phonebook.py 
+18: __pycache__ 
+19: test.py 
+20: while&random.py 
+21: data.json 
+22: README.md 
+23: generator.py 
+24: .gitignore 
+25: perenos.py 
+26: try_except.py 
+27: magic_metod.py 
+28: getter_setter.py 
+29: Inheritance_class.py 
+30: decoratory.py 
+31: myfile.txt 
+32: venv 
+33: test_os.txt 
+34: decor_class.py 
+35: test_decor_task.py 
+36: .git 
+37: product_store.py 
+38: class_.py 
+39: .idea 
+5: funtions.py 
+6: fraction_func.py 
+7: logs.txt 
+8: decor_task.py 
+9: files.py 
+10: polimorfizm.py 
+11: dict_split.py 
+12: lucky_ticket.py 
+13: decorator_with_param.py 
+14: library_class.py 
+15: primer.py 
+16: multiple_inheritance.py 
+17: os__.py 
+18: logfile.log 
+19: bools.py 
+20: format.py 
+21: my_exception.py 
+22: json_phonebook.py 
+23: __pycache__ 
+24: test.py 
+25: while&random.py 
+26: data.json 
+27: README.md 
+28: generator.py 
+29: .gitignore 
+30: perenos.py 
+31: try_except.py 
+32: magic_metod.py 
+33: getter_setter.py 
+34: Inheritance_class.py 
+35: decoratory.py 
+36: myfile.txt 
+37: venv 
+38: test_os.txt 
+39: decor_class.py 
+40: test_decor_task.py 
+41: .git 
+42: product_store.py 
+43: class_.py 
+44: .idea 
+5: untitled folder 
+6: anydesk.dmg 
+7: РЕГ ДОК 
+8: xml_files 
+9: 20130523-ser_10.jpg 
+10: .DS_Store 
+11: photo_2021-10-09 23.20.48.jpeg 
+12: images.jpeg 
+13: AZİMUT REKV RUS.docx 
+14: 2021-01-24 21.40.30.jpg 
+15: 2021-10-09_viktor_pistryak.pdf 
+16: .zshrc.crash 
+17: EPD b8de52f5-7f8e-4276-9102-631ac8c432e0 (2).pdf 
+18: .localized 
+19: AUSRA 
+20: uTorrentWeb.dmg 
+21: Метекс 2.pdf 
+22: Експедитор1 -експедитор2ФОП Лях с правками.doc 
+23: Macs Fan Control.app 
+24: WhatsApp Image 2021-07-29 at 19.36.43.jpeg 
+25: Логистиктрансавто 
+26: DB.Browser.for.SQLite-3.12.1-v2.dmg 
+27: 12878616.pdf 
+28: WhatsApp Image 2021-07-29 at 19.36.42.jpeg 
+29: Логистиктрансавто.zip 
+30: изображение_viber_2021-10-15_11-12-50-903.jpg 
+31: xampp-osx-7.2.10-0-vm.dmg 
+32: xml_files.zip 
+33: bootstrap-5.1.0-examples 
+34: xampp-osx-8.0.9-0-vm.bz2 
+35: Notifications - Leva Beetroot Project .pdf 
+36: Експедитор1 -експедитор2ФОП Лях с правками.pdf 
+37: Nachalo_(2010).HDRip-AVC.ac3.Dub.Sub_[All.Films][RG].mkv 
+38: Реквизиты Укр.doc 
+39: Концепции Анжелика 09.06.21.m4a 
+40: Предложение 2021.docx 
+41: Adobe Photoshop 2020.dmg 
+42: EPD 0b208203-7357-45aa-9a72-98824d6b5cdc.pdf 
+43: 26.Aug.2019-minecraft-game.jpg 
+44: img001.jpg 
+45: Скан АХ0115ІР АХ9145ХР.pdf 
+46: puls.torrent 
+47: Доверенность Литвинович СОПТ.pdf 
+48: Сергей Б. Медовая Черешня 2021.m4a 
+49: 1457344222_novaskin-minecraft-wallpaper (2).jpg 
+50: postgresql-12.3-1-osx.dmg 
+51: EPD b8de52f5-7f8e-4276-9102-631ac8c432e0 (1).pdf 
+52: Microsoft Office 2019 for Mac 16.42 
+53: 7264.jpg 
+54: EPD b8de52f5-7f8e-4276-9102-631ac8c432e0.pdf 
+55: Yellow Green and Blue Cute Gemini Zodiac Sign Zoom Virtual Background – Zoom Virtual Background. Автор_ vika.koloskova – Canva.html 
+56: xampp-osx-8.0.9-0-vm.bz2.cpgz 
+57: Wrath_of_Man_2021_WEB-DLRip_Line_by_Dalemake 
+58: xampp-osx-8.0.9-0-vm.bz2 2.cpgz 
+59: WhatsApp Image 2021-07-29 at 19.36.42 (1).jpeg 
+5: untitled folder 
+6: anydesk.dmg 
+7: РЕГ ДОК 
+8: xml_files 
+9: 20130523-ser_10.jpg 
+10: .DS_Store 
+11: photo_2021-10-09 23.20.48.jpeg 
+12: images.jpeg 
+13: AZİMUT REKV RUS.docx 
+14: 2021-01-24 21.40.30.jpg 
+15: 2021-10-09_viktor_pistryak.pdf 
+16: .zshrc.crash 
+17: EPD b8de52f5-7f8e-4276-9102-631ac8c432e0 (2).pdf 
+18: .localized 
+19: AUSRA 
+20: uTorrentWeb.dmg 
+21: Метекс 2.pdf 
+22: Експедитор1 -експедитор2ФОП Лях с правками.doc 
+23: Macs Fan Control.app 
+24: WhatsApp Image 2021-07-29 at 19.36.43.jpeg 
+25: Логистиктрансавто 
+26: DB.Browser.for.SQLite-3.12.1-v2.dmg 
+27: 12878616.pdf 
+28: WhatsApp Image 2021-07-29 at 19.36.42.jpeg 
+29: Логистиктрансавто.zip 
+30: изображение_viber_2021-10-15_11-12-50-903.jpg 
+31: xampp-osx-7.2.10-0-vm.dmg 
+32: xml_files.zip 
+33: bootstrap-5.1.0-examples 
+34: xampp-osx-8.0.9-0-vm.bz2 
+35: Notifications - Leva Beetroot Project .pdf 
+36: Експедитор1 -експедитор2ФОП Лях с правками.pdf 
+37: Nachalo_(2010).HDRip-AVC.ac3.Dub.Sub_[All.Films][RG].mkv 
+38: Реквизиты Укр.doc 
+39: Концепции Анжелика 09.06.21.m4a 
+40: Предложение 2021.docx 
+41: Adobe Photoshop 2020.dmg 
+42: EPD 0b208203-7357-45aa-9a72-98824d6b5cdc.pdf 
+43: 26.Aug.2019-minecraft-game.jpg 
+44: img001.jpg 
+45: Скан АХ0115ІР АХ9145ХР.pdf 
+46: puls.torrent 
+47: Доверенность Литвинович СОПТ.pdf 
+48: Сергей Б. Медовая Черешня 2021.m4a 
+49: 1457344222_novaskin-minecraft-wallpaper (2).jpg 
+50: postgresql-12.3-1-osx.dmg 
+51: EPD b8de52f5-7f8e-4276-9102-631ac8c432e0 (1).pdf 
+52: Microsoft Office 2019 for Mac 16.42 
+53: 7264.jpg 
+54: EPD b8de52f5-7f8e-4276-9102-631ac8c432e0.pdf 
+55: Yellow Green and Blue Cute Gemini Zodiac Sign Zoom Virtual Background – Zoom Virtual Background. Автор_ vika.koloskova – Canva.html 
+56: xampp-osx-8.0.9-0-vm.bz2.cpgz 
+57: Wrath_of_Man_2021_WEB-DLRip_Line_by_Dalemake 
+58: xampp-osx-8.0.9-0-vm.bz2 2.cpgz 
+59: WhatsApp Image 2021-07-29 at 19.36.42 (1).jpeg 

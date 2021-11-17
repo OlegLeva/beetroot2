@@ -1,4 +1,5 @@
 from functools import wraps
+from test import fib
 
 
 class TypeDecorators:
@@ -6,6 +7,7 @@ class TypeDecorators:
         self.func = func
 
     def __call__(self, *args, **kwargs):
+
         res = self.func(*args, **kwargs)
         return res
 
@@ -23,3 +25,4 @@ def print_dig_str(str_dig):
 
 print(print_dig_str.to_int('22'))
 print(type(print_dig_str.to_int('22')))
+
