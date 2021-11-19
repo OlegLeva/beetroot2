@@ -151,4 +151,4 @@ def lucky_ticket_all(ticket_len):
     return count
 
 
-print(lucky_ticket_all(8))
+print(lucky_ticket_all(6))
