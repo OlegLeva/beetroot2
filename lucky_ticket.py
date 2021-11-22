@@ -21,18 +21,16 @@ def decor_time(func):
 # def lucky_number_6():
 #     counter = 0
 #     for i1 in range(10):
-#         print(f'i1 {i1}')
 #         for i2 in range(10):
 #             for i3 in range(10):
 #                 for i4 in range(10):
-#                     print(f'i4 {i4}')
 #                     for i5 in range(10):
 #                         for i6 in range(10):
 #                             if i1 + i2 + i3 == i4 + i5 + i6: counter += 1
-#                             # pdb.set_trace()
+#                             print(i1, i2, i3, i4, i5, i6)
 #     return counter
-#
-#
+# #
+# #
 # print(lucky_number_6())
 
 
@@ -135,20 +133,48 @@ def decor_time(func):
 #
 # is_happy = lambda x: x % 1e3 % 9 == x // 1e3 % 9
 # print(is_happy)
+#
+# @decor_time
+# def lucky_ticket_all(ticket_len):
+#     if ticket_len == 1:
+#         return 9
+#     count = 0
+#     end_range = 10 ** ticket_len
+#     start_range = 10 ** (ticket_len // 2) + 1
+#     for n in range(start_range, end_range):
+#         n = str(n)
+#         right = sum([int(i) for i in n[:-ticket_len // 2]])
+#         left = sum([int(i) for i in n[-ticket_len // 2:]])
+#         if right == left:
+#             count += 1
+#
+#     return count
+#
+
+# print(lucky_ticket_all(3))
+
 
 @decor_time
-def lucky_ticket_all(ticket_len):
+def lucky_number():
+    n = 8
+    stack = [0] * n
     count = 0
-    end_range = 10 ** ticket_len
-    start_range = 10 ** (ticket_len // 2) + 1
-    for n in range(start_range, end_range):
-        n = str(n)
-        right = sum([int(i) for i in n[:-ticket_len // 2]])
-        left = sum([int(i) for i in n[-ticket_len // 2:]])
-        if right == left:
-            count += 1
 
+    while stack:
+        if stack[-1] > 9:
+            stack.pop()
+            if stack: stack[-1] += 1
+            continue
+
+        if len(stack) < n:
+            stack.extend([0] * (n - len(stack)))
+
+        # Todo: depends on n
+        middle = n//2
+        if sum(stack[:middle]) == sum(stack[-middle:]): count += 1
+
+        stack[-1] += 1
     return count
 
+print(lucky_number())
 
-print(lucky_ticket_all(8))
