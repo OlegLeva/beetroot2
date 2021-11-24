@@ -5,11 +5,8 @@ class Stack:
     def __init__(self):
 
         self.items = []
-        self.max_value = 0
 
     def push(self, item):
-        if item > self.max_value:
-            self.max_value = item
         self.items.append(item)
 
     def pop(self):
@@ -19,31 +16,39 @@ class Stack:
 
     def max(self):
         res = 0
-        for i in self.items:
-            if i > res:
-                res = i
+        stack_2 = []
+        while self.items:
+            val = self.items.pop()
+            if val > res:
+                res = val
+            stack_2.append(val)
+        while stack_2:
+            val = stack_2.pop()
+            self.items.append(val)
         return res
 
-    def max_val(self):
-        return self.max_value
 
 
 lst = Stack()
 lst.push(44)
 lst.push(66)
+print(lst.items)
+print(f'Max value {lst.max()}')
 lst.push(333)
 lst.push(32)
+lst.push(444)
 
-print(lst.max_val())
-print(lst.max())
 print(lst.items)
+print(f'Max value {lst.max()}')
+lst.pop()
+lst.pop()
 lst.pop()
 print(lst.items)
+print(f'Max value {lst.max()}')
 
 
 def coin():
     return randint(0, 1)
-
 
 
 def dice():
@@ -57,28 +62,22 @@ def dice():
 print(dice())
 
 
-
 # def test_dice(func):
 #     dict_test = {}
 #     for _ in range(100):
 #         v = func
-#         if dict_test[v] in dict_test: dict_test[v] += 1
-#         else: dict_test[v] = 1
-#         print(dict_test)
+#         if dict_test[v] not in dict_test: dict_test[v] = 1
+#         else: dict_test[v] += 1
+#
 #     return dict_test
 #
 # print(test_dice(dice()))
 
-# def test_dice(func):
-#     dict_test = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
-#     for _ in range(1000):
-#         dict_test[func] += 1
-#     return dict_test
-#
-# print(test_dice(dice()))
-
-dict_test = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
-
-print(2 in dict_test)
+def test_dice(func):
+    dict_test = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    for _ in range(1000):
+        dict_test[func] += 1
+    return dict_test
 
 
+print(test_dice(dice()))
