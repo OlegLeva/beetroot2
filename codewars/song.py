@@ -19,3 +19,4 @@ print(a.how_many(['John', 'john', 'ivan', 'Ivan', 'oleg']))
 print((a.how_many(['JOHN', 'FRED', 'BOB', 'CARL', 'RYAN', 'KATE'])))
 
 
+'''https://www.codewars.com/kata/search/python?beta=false&q=&r%5B%5D=-7&tags=Classes&xids=played'''
