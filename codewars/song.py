@@ -9,7 +9,7 @@ class Song:
         for name in args:
             my_set.add(name.lower())
         diff_set = my_set.difference(self.general_set)
-        self.general_set = self.general_set | my_set
+        self.general_set |= my_set
         return len(diff_set)
 
 
