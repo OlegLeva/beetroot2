@@ -44,6 +44,14 @@
 # print(lucky_ticket_all(6))
 
 
-integers_list = [-18, -31, 81, -19, 111, -888]
-w = ''.join(str(e) for e in integers_list)
-print(w)
+class Dictionary():
+    def __init__(self):
+        self.my_dict = {}
+
+    def newentry(self, word, definition):
+        self.my_dict[word] = definition
+
+    def look(self, key):
+        if key not in self.my_dict:
+            return f"Can't find entry for {key}"
+        return self.my_dict[key]
