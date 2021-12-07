@@ -18,12 +18,8 @@ class MyWindow(QMainWindow):
         self.setWindowTitle('Третье окно')
         self.setGeometry(50, 70, 500, 500)
         widget = QWidget()
-        # kukuLabel = QLabel('<h1>Kuku</h1>')
         self.editArea = QLineEdit('0')
-        # mainButtom = QPushButton('Push')
-        # mainButtom_2 = QPushButton('Second Push')
         mainLayout = QVBoxLayout()
-        # mainLayout.addWidget(kukuLabel)
         mainLayout.addWidget(self.editArea)
 
         buttonLayout = QGridLayout()
@@ -101,17 +97,6 @@ class MyWindow(QMainWindow):
     def change_text(self, text):
         self.editArea.setText(self.editArea.text() + text)
 
-#
-# def main_widget():
-#     app = QApplication(sys.argv)
-#     mainWidget = QWidget()
-#     mainWidget.setWindowTitle('Моё второе окно')
-#     # mainWidget.setFixedSize(500, 500)
-#     mainWidget.setGeometry(50, 70, 500, 500)
-#     helloWorldLabel = QLabel('<b><i>Hello</b></i>', parent=mainWidget)
-#     helloWorldLabel.move(10, 25)
-#     mainWidget.show()
-#     app.exec()
 
 def main_window():
     app = QApplication(sys.argv)
