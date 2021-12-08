@@ -82,8 +82,8 @@ class MyWindow(QMainWindow):
             btn = QPushButton(name)
             self.buttons[name] = btn
             buttonLayout.addWidget(btn,
-                                   buttonConfig.get('row', -1),
-                                   buttonConfig.get('col', -1),
+                                   buttonConfig['row'],
+                                   buttonConfig['col'],
                                    1,
                                    buttonConfig.get('colSpan', 1))
         mainLayout.addLayout(buttonLayout)
