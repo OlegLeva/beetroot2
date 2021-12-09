@@ -24,11 +24,11 @@ class MyWindow(QMainWindow):
         self.head_Request_Label = QLabel('Выбор авто')
         self.request = QLineEdit('')
         self.request.setPlaceholderText("Введите номер авто")
-        self.btn = QPushButton('Найти')
+        self.btn = QPushButton('Найти', self)
         self.head_Edit_Label = QLabel('Добавление информации')
         self.update_edit = QLineEdit('')
         self.update_edit.setPlaceholderText("Введите информацию")
-        btn_2 = QPushButton('Добавить')
+        self.btn_2 = QPushButton('Добавить', self)
         self.answer = QTextEdit('')
         self.answer.setPlaceholderText("ANSWER")
 
@@ -40,7 +40,7 @@ class MyWindow(QMainWindow):
         findLoyaut.addWidget(self.btn)
 
         editLoyaut.addWidget(self.update_edit)
-        editLoyaut.addWidget(btn_2)
+        editLoyaut.addWidget(self.btn_2)
 
         mainLayout.addWidget(self.head_Request_Label)
         mainLayout.addLayout(findLoyaut)
@@ -51,23 +51,39 @@ class MyWindow(QMainWindow):
         widget.setLayout(mainLayout)
         self.setCentralWidget(widget)
 
-    car_json = [
-        {
-            'number': 'BI9313EX',
-            'data': ['BI9313EX', 'BI3866XF',
-                     'Терещенко Дмитрий Анатольевич',
-                     '+380980353438']
-        },
-        {
-            'number': 'BI8576EI',
-            'data': ['BI8576EI', 'BI3844XF',
-                     'Терещенко Дмитрий Анатольевич',
-                     '+380980353438']
-        }
-    ]
+        self.car_json = [
+            {
+                'number': '9313',
+                'data': ['BI9313EX', 'BI3866XF',
+                         'Терещенко Дмитрий Анатольевич',
+                         '+380980353438']
+            },
+            {
+                'number': '8576',
+                'data': ['BI8576EI', 'BI3844XF',
+                         'Возный Андрей Юрьевич',
+                         '+380679265219']
+            }
+        ]
+        self.btn.clicked.connect(partial(self.get_find_text))
+        self.btn_2.clicked.connect(partial(self.add_text))
 
-    def get_find_text(self, text=''):
-        self.request.setText(self.request.text() + text)
+    def get_find_text(self):
+        for self.car_data in self.car_json:
+            if self.car_data['number'] == self.request.text():
+                text_print = ''
+                for i in self.car_data['data']:
+                    text_print += i+'\n'
+                self.answer.setText(text_print)
+
+    def add_text(self):
+        print(self.car_json[0]['data'])
+        for self.car_data in self.car_json:
+            if self.car_data['number'] == self.request.text():
+                self.car_data['data'].append(self.update_edit.text())
+
+
+
 
 def main_window():
     app = QApplication(sys.argv)
