@@ -1,6 +1,7 @@
 from functools import partial
 import json
 import psycopg2
+from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import (QApplication,
                              QWidget,
                              QMainWindow,
@@ -23,6 +24,10 @@ class MyWindow(QMainWindow):
         self.setGeometry(300, 100, 800, 500)
         widget = QWidget()
 
+        custom_font = QFont()
+        custom_font.setWeight(18)
+        QApplication.setFont(custom_font, "QLabel")
+
         self.head_Request_Label = QLabel('Выбор авто')
         self.request = QLineEdit('')
         self.request.setPlaceholderText("Введите номер авто")
@@ -42,7 +47,7 @@ class MyWindow(QMainWindow):
         self.update_edit.setPlaceholderText("Введите информацию")
         self.btn_2 = QPushButton('Добавить', self)
         self.btn_2.setFixedSize(150, 30)
-        # self.btn_2.setStyleSheet('background: rgb(197, 237, 238);')
+        self.btn_2.setStyleSheet('background: rgb(197, 237, 238);')
 
         self.answer = QTextEdit('')
         self.answer.setPlaceholderText("ANSWER")
@@ -127,7 +132,7 @@ class MyWindow(QMainWindow):
             elif self.request.text() in self.car_data['number']:
                 text_print = ''
                 for i in self.car_data['data']:
-                    text_print += i+'\n'
+                    text_print += f"<h3>{i}\n<\h3>"
                 self.answer.setText(text_print)
 
 
