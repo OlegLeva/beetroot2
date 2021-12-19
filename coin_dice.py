@@ -6,32 +6,34 @@ def coin():
 
 
 def dice():
-    res = 1
-    for _ in range(5):
-        res += coin()
-    return res
+    while True:
+        binary = str(coin())+str(coin())+str(coin())
+        decimal = int(binary, 2)
+        if decimal < 6: break
+    return decimal
 
+def dice_1():
+    while True:
+        binary = str(coin())+str(coin())+str(coin())
+        decimal = int(binary, 2)
+        if decimal < 6: break
+    return decimal
 
-
-# def test_dice():
-#     dict_test = {}
-#     for _ in range(1000):
-#         v = dice()
-#         print(v)
-#         if dict_test[v] not in dict_test:
-#             dict_test[v] = 1
-#         else:
-#             dict_test[v] += 1
-#
-#     print(dict_test)
-#
-# test_dice()
 
 def test_dice():
-    dict_test = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    dict_test = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
     for _ in range(1000000):
         dict_test[dice()] += 1
     print(dict_test)
 
+print(test_dice())
+print(dice())
+print(dice())
+print(dice())
+print(dice())
 
-test_dice()
+
+
+x = "125"
+y = '1928'
+z = "2"

@@ -12,27 +12,14 @@ from PyQt5.QtWidgets import (QApplication,
                              QTextEdit)
 
 import sys
-# import Track_data.test_QT
-class All_Track_Window(QMainWindow):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.setWindowTitle("Все Авто")
-        self.resize(400, 800)
-        self.widget_all = QWidget()
-        mainLayout_all = QVBoxLayout()
-        self.answer_all = QTextEdit()
-        mainLayout_all.addWidget(self.answer_all)
-        self.widget_all.setLayout(mainLayout_all)
-        self.setCentralWidget(self.widget_all)
 
 
-
-class MyWindow(All_Track_Window):
+class MyWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setWindowTitle("Данные автомобиля")
         self.setGeometry(300, 100, 800, 500)
-        self.widget = QWidget()
+        widget = QWidget()
 
         custom_font = QFont()
         custom_font.setWeight(18)
@@ -61,13 +48,13 @@ class MyWindow(All_Track_Window):
         self.head_Edit_Label = QLabel('Добавление информации')
         self.update_edit = QLineEdit('')
         self.request.setStyleSheet("color: gray;"
-                                   "background: rgb(217, 250, 244);"
-                                   "selection-color: green;"
-                                   "selection-background-color: blue;")
+                                       "background: rgb(217, 250, 244);"
+                                       "selection-color: green;"
+                                       "selection-background-color: blue;")
         self.add_track.setStyleSheet("color: gray;"
-                                     "background: rgb(217, 250, 244);"
-                                     "selection-color: green;"
-                                     "selection-background-color: blue;")
+                                       "background: rgb(217, 250, 244);"
+                                       "selection-color: green;"
+                                       "selection-background-color: blue;")
         # self.update_edit.setFixedSize(600, 30)
         self.request.setFixedSize(600, 30)
         self.add_track.setFixedSize(750, 30)
@@ -103,8 +90,8 @@ class MyWindow(All_Track_Window):
         mainLayout.addWidget(self.answer)
         mainLayout.addWidget(self.btn_edit)
 
-        self.widget.setLayout(mainLayout)
-        self.setCentralWidget(self.widget)
+        widget.setLayout(mainLayout)
+        self.setCentralWidget(widget)
 
         f = open("data.json")
 
@@ -132,8 +119,6 @@ class MyWindow(All_Track_Window):
         self.btn_2.clicked.connect(partial(self.get_all))
 
     def get_all(self):
-        win = All_Track_Window()
-        win.show()
         all_text = ''
         for self.car_data in self.car_json:
             text_print = f'<h3>{self.car_data["number"]} </h3>'
@@ -141,7 +126,8 @@ class MyWindow(All_Track_Window):
             for i in self.car_data['data']:
                 text_print += f"<h3>{i}\n<\h3>"
             all_text += text_print
-            self.answer_all.setText(all_text)
+            self.answer.setText(all_text)
+
 
     def edit_data_auto(self):
         new_list = [i.strip() for i in self.answer.toPlainText().split('\n')]
@@ -218,12 +204,11 @@ class MyWindow(All_Track_Window):
 
 
 
+
 def main_window():
     app = QApplication(sys.argv)
     window = MyWindow()
     window.show()
-    # win = All_Track_Window()
-    # win.show()
     return_code = app.exec()
     sys.exit(return_code)
 
