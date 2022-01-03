@@ -156,7 +156,7 @@ def decor_time(func):
 
 @decor_time
 def lucky_number():
-    n = 8
+    n = 6
     stack = [0] * n
     count = 0
 

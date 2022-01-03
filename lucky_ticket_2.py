@@ -7,22 +7,30 @@ def lucky_number(n):
 
     while stack:
 
+
         if stack[-1] > 9:
+            # print(f'Когда когда поледний 10 {stack}')
             stack.pop()
             if stack:
                 stack[-1] += 1
-                if len(stack) <= middle: left = sum(stack[:middle])
+                # import pdb; pdb.set_trace()
+                if len(stack) <= middle:
+                    left = sum(stack[:middle])
+                    print(stack)
 
             continue
 
         if len(stack) < n:
+            # print(f'Когда LEN меньше 6 {stack}')
             stack.extend([0] * (n - len(stack)))
             right = sum(stack[-middle:])
 
-        if left == right: count += 1
+        if left == right:
+            count += 1
         right += 1
 
         stack[-1] += 1
+
     return count
 
 
@@ -31,3 +39,5 @@ if __name__ == "__main__":
     t = datetime.now()
     print(lucky_number(6))
     print(datetime.now() - t)
+
+
