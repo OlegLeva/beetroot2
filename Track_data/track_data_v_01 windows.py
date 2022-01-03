@@ -59,8 +59,8 @@ class MyWindow(QMainWindow):
         self.request.setFixedSize(600, 30)
         self.add_track.setFixedSize(750, 30)
         # self.update_edit.setPlaceholderText("Введите информацию")
-        self.btn_2 = QPushButton('ДАННЫЕ ВСЕХ АВТО', self)
-        self.btn_2.setFixedSize(250, 30)
+        # self.btn_2 = QPushButton('ДАННЫЕ ВСЕХ АВТО', self)
+        # self.btn_2.setFixedSize(250, 30)
         # self.btn_2.setStyleSheet('background: rgb(197, 237, 238);')
 
         self.answer = QTextEdit('')
@@ -80,12 +80,11 @@ class MyWindow(QMainWindow):
         findLoyaut.addWidget(self.btn)
 
         # editLoyaut.addWidget(self.update_edit)
-        editLoyaut.addWidget(self.btn_2)
+        # editLoyaut.addWidget(self.btn_2)
 
         mainLayout.addLayout(add_carLayout)
         mainLayout.addWidget(self.head_Request_Label)
         mainLayout.addLayout(findLoyaut)
-        # mainLayout.addWidget(self.head_Edit_Label)
         mainLayout.addLayout(editLoyaut)
         mainLayout.addWidget(self.answer)
         mainLayout.addWidget(self.btn_edit)
@@ -108,7 +107,6 @@ class MyWindow(QMainWindow):
 
         self.dump_json()
         self.btn.clicked.connect(partial(self.get_find_text))
-        # self.btn.clicked.connect(EnterToken(self))
         self.btn_add.clicked.connect(partial(self.add_auto))
         self.btn_add.clicked.connect(self.add_track.clear)
         self.btn_save.clicked.connect(partial(self.save_auto))
@@ -116,18 +114,16 @@ class MyWindow(QMainWindow):
         self.btn_del.clicked.connect(partial(self.del_auto))
         self.btn_del.clicked.connect(self.add_track.clear)
         self.btn_edit.clicked.connect(partial(self.edit_data_auto))
-        self.btn_2.clicked.connect(partial(self.get_all))
 
-    def get_all(self):
-        all_text = ''
-        for self.car_data in self.car_json:
-            text_print = f'<h3>{self.car_data["number"]} </h3>'
-            self.car_data['data'].append("___________________________")
-            for i in self.car_data['data']:
-                text_print += f"<h3>{i}\n<\h3>"
-            all_text += text_print
-            self.answer.setText(all_text)
-
+    # def get_all(self):
+    #     all_text = ''
+    #     for self.car_data in self.car_json:
+    #         text_print = f'<h3>{self.car_data["number"]} </h3>'
+    #         self.car_data['data'].append("___________________________")
+    #         for i in self.car_data['data']:
+    #             text_print += f"<h3>{i}\n<\h3>"
+    #         all_text += text_print
+    #         self.answer.setText(all_text)
 
     def edit_data_auto(self):
         new_list = [i.strip() for i in self.answer.toPlainText().split('\n')]
@@ -135,7 +131,6 @@ class MyWindow(QMainWindow):
         for self.car_data in self.car_json:
             if number == self.car_data['number']:
                 self.car_json.remove(self.car_data)
-                print(number)
                 self.patern_dict['number'] = number
                 self.patern_dict['data'] = new_list
                 new_dict = self.patern_dict
